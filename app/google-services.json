@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "30652018920",
+    "project_id": "integrador-c5039",
+    "storage_bucket": "integrador-c5039.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:30652018920:android:947c7acc912b62027d595d",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "30652018920-uhnbcuda82qugdoh9ccsotvvuerrdpgq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPjA4nbgdjotLo-WwI91niSJtC1OmT97g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "30652018920-uhnbcuda82qugdoh9ccsotvvuerrdpgq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
