@@ -3,11 +3,13 @@ package com.example.myapplication.services;
 import android.app.Activity;
 import android.app.Service;
 import android.content.Intent;
+import android.os.Build;
 import android.os.IBinder;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 
 import com.example.myapplication.utils.CommandUtils;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -61,6 +63,7 @@ public class MainService extends Service {
                                 });*/
 
                         db.collection("teste").addSnapshotListener(new EventListener<QuerySnapshot>() {
+                            @RequiresApi(api = Build.VERSION_CODES.N)
                             @Override
                             public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
                                 if(error != null) {
@@ -92,6 +95,7 @@ public class MainService extends Service {
                                             } catch (IOException e) {
                                                 e.printStackTrace();
                                             }
+                                            //CommandUtils.createClick(x, y);
                                             Log.d("Pos", x + ", " + y);
                                             break;
                                         case REMOVED:

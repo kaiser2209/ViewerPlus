@@ -129,11 +129,10 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });*/
 
-        //finish();
         //this.moveTaskToBack(true);
 
 
-        /*binding = ActivityMainBinding.inflate(getLayoutInflater());
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.toolbar);
@@ -148,22 +147,23 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     Process su = Runtime.getRuntime().exec("su");
                     //Process clique = Runtime.getRuntime().exec("/system/bin/ input tap 120 120");
-                    //DataOutputStream outputStream = new DataOutputStream(su.getOutputStream());
+                    DataOutputStream outputStream = new DataOutputStream(su.getOutputStream());
                     //InputStream response = su.getInputStream();
                     //Process touch = Runtime.getRuntime().exec("input tap 600 450");
                     //CommandUtils.sendTap(600, 450);
                     //CommandUtils.sendText("Teste%sNovo%sNovo");
-                    CommandUtils.sendSwipe(600, 450, 600, 450, 500);
-                    CommandUtils.sendTap(600, 430);
+                    //CommandUtils.sendSwipe(600, 450, 600, 450, 500);
+                    //CommandUtils.sendTap(600, 430);
                     //Process texto = Runtime.getRuntime().exec("input text Teste Novo");
 
-                    //outputStream.writeBytes("/system/bin/ input tap 600 500");
-                    //outputStream.flush();
+                    outputStream.writeBytes("/system/bin/ input tap 600 200");
+                    outputStream.flush();
+                    //InputStream response = su.getInputStream();
                     //su.waitFor();
                     //Log.d("Teste", "Resposta " + readFully(response));
                     //outputStream.writeBytes("exit\n");
                     //outputStream.flush();
-                    //outputStream.close();
+                    outputStream.close();
                     Log.d("Teste", "Executou!");
                     Log.d("Teste", "Clique executado!");
 
@@ -173,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });*/
+        });
     }
 
     public static String readFully(InputStream is) throws IOException {
